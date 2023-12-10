@@ -54,35 +54,31 @@
         <h1 class="section-title">O NAS</h1>
         <div class="break"></div>
         
-
-
-        <div class="box-about-us">
-       
-            <div class="container-about-us">
-                <div class="column1-about-us"></div>
-                <div class="column2-about-us">
-                    <div class="card-about-us">
-                        <input id="ch" type="checkbox">
-    
-                                <h2>COSMIC-DISTRIBUTION</h2>
-                                <br>
-                                <p>Jesteśmy nowo powstałą firmą, która zaczęła działalność na polskim rynku w maju 2023 roku.
-                                    Nasz zespół składa się z wyspecjalizowanych, kompetentnych i zaangażowanych pracowników z doświadczeniem w branży kosmetycznej i środków czystości od ponad dwóch dekad.
-                                    <br><br><b>COSMIC-DISTRIBUTION</b> jest  jedynym i oficjalnym dystrybutorem francuskiej marki kosmetycznej COTTAGE, która debiutuje na rynku polskim. 
-                                    <br><br>Po zamknięciu oddziału Burnus Polska, COSMIC-DISTRIBUTION przejęło częściową dystrybucję niemieckich produktów <b>Burnus Care GmbH (Kamill, Burti)</b> między innymi do sieci spożywczo-drogeryjnych i hurtowni.   
-                                </p>
-                                <div class="content-readmore">
-                                    <p>COSMIC-DISTRIBUTION specjalizuje się w dystrybucji kosmetyków i środków czystości na terenie Polski. Ofertę kierujemy do dużych i małych sieci handlowych, hurtowni jak również do niewielkich sklepów detalicznych. Budując dystrybucję poprzez sprzedaż produktów do naszych odbiorców przykładamy dużą wagę do sprawności i efektywność realizacji zamówień. 
-                                        <br><br>Dbamy o relacje budowane z naszymi Klientami oraz o długofalową współpracę, a uczciwość, rzetelność i szybkość w podejmowaniu decyzji to nasze mocne strony.  Biuro firmy znajduje się tuż przy granicy z Warszawą (przy drodze S8) a Magazyn Centralny na Śląsku, co sprawia, że znajdujemy się w centrum polskiego i europejskiego szlaku handlowego. Umożliwia to sprawną, szybką i terminową realizację zamówień.
-                                        <br><br>Jesteśmy otwarci na nowe propozycje obejmujące zakres oferowanych przez nas produktów oraz marek. Zapraszamy do współpracy zarówno producentów, sieci handlowe oraz hurtownie, których przedstawiciele pragną uzupełnić asortyment produktami znanych i poszukiwanych przez klientów marek.
-                                        </p>
-                                        <label for="ch">Ukryj</label>
-                                </div>
-                                <label for="ch">Dowiedz się więcej</label>
-                            
+        <div class="container-about">
+            <div class="image-about"></div>
+                <div class="box-about">
+                    <input type="checkbox" name="readmore" id="readmore">
+                    <div class="content-about">
+                        <h1>COSMIC-DISTRIBUTION</h1>
+                        <div class="des-about">
+                            Jesteśmy nowo powstałą firmą, która zaczęła działalność na polskim rynku w maju 2023 roku.
+                            Nasz zespół składa się z wyspecjalizowanych, kompetentnych i zaangażowanych pracowników z doświadczeniem w branży kosmetycznej i środków czystości od ponad dwóch dekad.
+                            <br><b>COSMIC-DISTRIBUTION</b> jest  jedynym i oficjalnym dystrybutorem francuskiej marki kosmetycznej <b>COTTAGE</b>, która debiutuje na rynku polskim. 
+                            <br><br>Po zamknięciu oddziału Burnus Polska, COSMIC-DISTRIBUTION przejęło częściową dystrybucję niemieckich produktów <b>Burnus Care GmbH (Kamill, Burti)</b> między innymi do sieci spożywczo-drogeryjnych i hurtowni.
+                            <br><br>COSMIC-DISTRIBUTION specjalizuje się w dystrybucji kosmetyków i środków czystości na terenie Polski. Ofertę kierujemy do dużych i małych sieci handlowych, hurtowni jak również do niewielkich sklepów detalicznych. Budując dystrybucję poprzez sprzedaż produktów do naszych odbiorców przykładamy dużą wagę do sprawności i efektywność realizacji zamówień. 
+                                <br><br>Dbamy o relacje budowane z naszymi Klientami oraz o długofalową współpracę, a uczciwość, rzetelność i szybkość w podejmowaniu decyzji to nasze mocne strony.  Biuro firmy znajduje się tuż przy granicy z Warszawą (przy drodze S8) a Magazyn Centralny na Śląsku, co sprawia, że znajdujemy się w centrum polskiego i europejskiego szlaku handlowego. Umożliwia to sprawną, szybką i terminową realizację zamówień.
+                                <br><br>Jesteśmy otwarci na nowe propozycje obejmujące zakres oferowanych przez nas produktów oraz marek. Zapraszamy do współpracy zarówno producentów, sieci handlowe oraz hurtownie, których przedstawiciele pragną uzupełnić asortyment produktami znanych i poszukiwanych przez klientów marek.
+                        </p>
+                        </div>
+                        <div class="button-about">
+                            <label for="readmore"
+                                data-more="Dowiedz się więcej"
+                                data-less="Ukryj"
+                            ></label>
+                        </div>
                     </div>
                 </div>
-            </div>
+            
         </div>
     
 
@@ -137,35 +133,77 @@
         <div class="break"></div>
         <div class="container-boxes-offer">
             <div class="box-offer-row">
-                <div class="box-offer">
-                    <img src="oferta1.png" class="offer-image" alt="Logo Cottage" title="Logo Cottage" />
-                    <div class="offer-description"><h3>Cottage - NOWOŚĆ w Polsce</h3>
-                        <br>Marka Cottage inspirowaną naturą posiada w swoim portfolio wyśmienite produkty do kąpieli, pielęgnacji ciała oraz włosów. Szeroka gama cudownych zapachów to przyjemna pielęgnacja przeznaczona dla całej rodziny.
-                        <br><br><h3>Cottage – moje źródło szczęścia.</h3>
+                <div class="box-offer"> 
+                    <img src="oferta1.png" class="offer-image offer-image-cottage" alt="Logo Cottage" title="Logo Cottage" />
+                    <div class="offer-description"><input id="ch2" type="checkbox"><h3>COTTAGE – NOWOŚĆ <br>W POLSCE.</h3>
+                        <p><br>Marka Cottage inspirowana naturą posiada w swoim portfolio wyśmienite produkty do kąpieli, pielęgnacji ciała oraz włosów. </p>
+                        <div class="content-readmore-cottage">
+                            <p>Szeroka gama cudownych zapachów to przyjemna pielęgnacja przeznaczona dla całej rodziny.</p>
+                                <label class="label-offer" for="ch2">Ukryj</label>
+                        </div>
+
+                        <br><h5>Cottage – moje źródło szczęścia.</h5>
+                        <label class="label-offer" for="ch2">Dowiedz się więcej</label>
                     </div>
                 </div>
                 <div class="box-offer">
                     <img src="oferta2.png" class="offer-image" alt="Logo Kamill" title="Logo Kamill" />
-                    <div class="offer-description"><h3>Kamill – kremy do rąk i paznokci <br>- 100% naturalnego rumianku.</h3>
-                        <br>Codzienna, skuteczna pielęgnacja dostosowana do różnych rodzajów skóry dla całej rodziny. 
-                        <br><br><h3>Idealne dla Twoich dłoni. <br>Dobre dla planety.</h3><br>
+                    <div class="offer-description"><input id="ch3" type="checkbox"><h3>KAMILL – kremy do rąk <br>i paznokci</h3>
+                        <p><br>100% naturalnego rumianku. Codzienna, skuteczna pielęgnacja dostosowana do różnych rodzajów skóry dla całej rodziny.</p>
+                        
+                        <div class="content-readmore-kamill">
+                            <p><br><ul>
+                                <li>✓ 100% organicznego rumianku.</li>
+                                <li>✓ Bez mikroplastiku.</li>
+                                <li>✓ Bez barwników, parabenów i parafin.</li>
+                            </ul>
+                            <label class="label-offer" for="ch3">Ukryj</label>
+                        </div>
+
+                        <br><h5>Idealne dla Twoich dłoni. <br>Dobre dla planety.</h5>
+                        <label class="label-offer" for="ch3">Dowiedz się więcej</label>
+                        
                     </div>
                 </div>
             </div>
             <div class="box-offer-row">
                 <div class="box-offer">
                     <img src="oferta3.png" class="offer-image" alt="Logo Burti" title="Logo Burti" />
-                    <div class="offer-description"><h3>Burti – proszki i płyny do prania.</h3>
-                        <br>Znakomite detergenty Burti zapewniają delikatną pielęgnację prania. Sprawdzone i cenione jako idealni partnerzy w gospodarstwie domowym od pokoleń. 
-                        <br><br><h3>WCZEŚNIEJ I OBECNIE: <br>100% JAKOŚCI</h3>
+                    <div class="offer-description"><input id="ch4" type="checkbox"><h3>BURTI – proszki i płyny <br>do prania.</h3>
+                        <p><br>Detergenty Burti zapewniają delikatną pielęgnację prania. Idealni partnerzy w gospodarstwie domowym od pokoleń.</p>
+                        
+                        <div class="content-readmore-burti">
+                            <p><br><ul>
+                                <li>✓ Usuwa uporczywe plamy.</li>
+                                <li>✓ Wzmacnia włókna.</li>
+                                <li>✓ Pielęgnuje i chroni.</li>
+                                <li>✓ Utrzymuje intensywność kolorów/olśniewającą biel.</li>
+                                <li>✓ Nie zawiera mikroplastiku, chroni środowisko.</li>
+                            </ul></p>
+                                <label class="label-offer" for="ch4">Ukryj</label>
+                        </div>
+
+                        <br><h5>WCZEŚNIEJ I OBECNIE: <br>100% JAKOŚCI.</h5>
+                        <label class="label-offer" for="ch4">Dowiedz się więcej</label>
                         
                     </div>
                 </div>
                 <div class="box-offer">
                     <img src="oferta4.png" class="offer-image" alt="Logo Glysolid" title="Logo Glysolid" />
-                    <div class="offer-description"><h3>Glysolid – kremy, balsamy do rąk i ciała o zaawansowanej formule.</h3>
-                        <br>Skoncentrowana, intensywna terapia dla szorstkiej, popękanej i bardzo suchej skóry. Zawiera glicerynę.
-                        <br><br><h3>Glysolid – chroni Twoją <br>popękaną skórę.</h3><br>
+                    <div class="offer-description"><input id="ch5" type="checkbox"><h3>Glysolid – kremy, balsamy <br>do rąk i ciała.</h3>
+                        <p><br>Zaawansowana formuła. Skoncentrowana, intensywna terapia dla szorstkiej, popękanej i bardzo suchej skóry. Zawiera glicerynę.</p>
+                        
+                        <div class="content-readmore-glysolid">
+                            <p><br><ul>
+                                <li>✓ Przyspiesza regenerację naskórka.</li>
+                                <li>✓ Chroni przed podrażnieniami.</li>
+                                <li>✓ Odpowiedni dla osób z chorobami skóry (egzema, łuszczyca, atopowe zapalenie skóry).</li>
+                            </ul>
+                            <label class="label-offer" for="ch5">Ukryj</label>
+                        </div>
+
+                        <br><h5>Glysolid – chroni Twoją <br>popękaną skórę.</h5>
+                        <label class="label-offer" for="ch5">Dowiedz się więcej</label>
                     </div>
                 </div>
             </div>
@@ -189,7 +227,7 @@
                 <img src="logo3.png" alt="logo" width="213px" height="42px">
                 
                 <div class="social-media">
-                    <div class="icon"><img src="Facebook.png" alt="Facebook" title="Facebook" width="30px" height="30px" /></div>
+                    <div class="icon"><img src="facebook.png" alt="Facebook" title="Facebook" width="30px" height="30px" /></div>
                     <div class="icon"><img src="instagram.png" alt="Instagram" title="Instagram" width="30px" height="30px" /></div>
                     <div class="icon"><img src="x-icon.png" alt="X" title="X" width="30px" height="30px" /></div>
                 </div></div>
