@@ -227,6 +227,7 @@ header {
   }
   .header-description {
     padding-top: 20px;
+    padding-bottom: 50px;
   }
   .header-photo {
     width: 353px;
@@ -252,7 +253,7 @@ header {
     height: 306px;
   }
   .header-description {
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 40px;
   }
 }
