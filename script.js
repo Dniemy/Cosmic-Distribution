@@ -18,7 +18,7 @@ document.querySelectorAll(".nav-link").forEach(n => n.
 
 /* SLIDER */
 
-const wrapper = dodument.querySelector('.wrapper')
+const wrapper = document.querySelector('.wrapper')
 
 let pressed = false
 let startX = 0
