@@ -213,6 +213,9 @@ header {
 
 
 @media (max-width: 1100px) {
+  .header {
+    height: 80vh;
+  }
   .container-header {
     display: flex;
     flex-direction: column-reverse;
