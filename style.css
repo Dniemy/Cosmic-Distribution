@@ -20,7 +20,7 @@ body {
 }
 
 
-/* NAVBAR  */
+/* NAVBAR */
 
 .flaga {
   height: 16px;
@@ -30,6 +30,7 @@ body {
 }
 
 .nav {
+  z-index: 1;
   position: fixed;
   width: 100%;
 }
@@ -221,6 +222,7 @@ header {
     display: flex;
     justify-content: center;
     padding-top: 100px;
+    margin-left: 0px;
   }
   .header-description {
     padding-top: 20px;
@@ -277,86 +279,125 @@ header {
 }
 
 
-/* --> SECTION 2: O NAS <-- */
+/* ABOUT US */
 
-
-.box-about-us {
-  display: flex;
-  justify-content: center;
-  
-}
-
-.container-about-us {
+.container-about {
+  position: flex;
+  flex-direction: column;
   background-color: #EAE1DC;
+  width: 1110px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: row;
   border-radius: 16px;
+  margin: 0 auto;
 }
 
-.column1-about-us {
-  width: 550px;
-  background-image: url(team.png);
-  border-radius: 16px 0px 0px 16px;
+.image-about {
+  display: flex;
+  background-image: url(team2.png);
+  height: 500px;
+  border-radius: 16px 16px 0px 0px;
+  clip-path: ellipse(1110px 480px at 50% 1%)
 }
-.column2-about-us{
-  width: 550px;
+
+.box-about input[name="readmore"]{
+  display: none;
 }
-.card-about-us {
-  padding: 30px 30px;
-  border-radius: 5px;
-  line-height: 1.3;
+.box-about h1{
+  margin-bottom: 30px;
   text-align: center;
 }
-
-#ch {
-  display: none;
+.box-about .des-about{
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  max-height: 150px;
+  transition: 0.8s ease-in-out;
 }
-
-#ch:checked ~ .content-readmore {
-  display: block;
+.box-about .des-about::before{
+  position: absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:50px;
+  transition: 0.5s ease-in-out;
+  content:'';
+  background-image: linear-gradient(to top, #EAE1DC, transparent);
 }
-
-#ch:checked ~ label {
-  display: none;
+.box-about .button-about{
+  margin-top:20px;
+  text-align: center;
 }
-
-.content-readmore {
-  display: none;
-}
-
-label {
+.box-about label{
+  text-align: center;
   display: inline-block;
-  cursor: pointer;
-  color: #fff;
   background-color: rgba(0, 0, 0, 0.25);
-  padding: 5px 13px;
+  color: #fff;
   border-radius: 5px;
-  margin-top: 12px;
+  width:160px;
+  height:30px;
+  position: relative;
+  cursor: pointer;
+
 }
+.box-about label::before{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  content:attr(data-more);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-about input[name="readmore"]:checked ~ .content-about label::before{
+  content:attr(data-less);
+}
+.box-about input[name="readmore"]:checked ~ .content-about .des-about{
+  max-height: 500px;
+}
+.box-about input[name="readmore"]:checked ~ .content-about .des-about::before{
+  height: 0px;
+}
+.content-about{
+  position: relative;
+  padding: 30px 50px 30px 50px;
+}
+
+
 
 
 @media (max-width: 1150px) {
-  .column1-about-us {
-    display: none;
+  .image-about {
+    height: 400px;
+    background-image: url(team2.png);
+    background-size: cover;
+    background-position: center top;
+    border-radius: 16px 16px 0px 0px;
+    clip-path: ellipse(1110px 380px at 50% 1%)
   }
-  .column2-about-us {
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    margin: 0 auto;
-    background-color: #EAE1DC;
-    width: 1110px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 16px;
-  }
- 
-  
-  .container-about-us {
+  .container-about {
     display: flex;
     max-width: 90%;
     background-image: none;
     margin: 0 auto;
+  }
+  .box-about input[name="readmore"]:checked ~ .content-about .des-about{
+    max-height: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .image-about {
+    height: 300px;
+    background-image: url(team2.png);
+    background-size: cover;
+    background-position: right top;
+    border-radius: 16px 16px 0px 0px;
+    clip-path: ellipse(1110px 280px at 50% 1%)
+  }
+  .box-about input[name="readmore"]:checked ~ .content-about .des-about{
+    max-height: 1800px;
   }
 }
 
@@ -463,7 +504,7 @@ label {
 /* SECTION 4: OFERTA */
 
 .offer {
-  background-color: #5D6AA1;
+  background-color: rgb(93, 106, 161);
   margin: 0 auto;
   padding-bottom: 32px;
 }
@@ -489,8 +530,7 @@ label {
   align-items: center; 
   justify-content: center;
   width: 540px;
-  height: 268px;
-  background-color: #717EB7;
+  background-color: rgb(113, 126, 183);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border: transparent;
   border-radius: 16px;
@@ -502,11 +542,116 @@ label {
 }
 
 .offer-description {
-  padding: 20px;
   color: white;
   text-align: center;
+  padding: 30px 30px 30px 30px;
+  line-height: 1.3;
 }
 
+h5 {
+  color: #EAE1DC;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#ch2 {
+  display: none;
+}
+
+#ch2:checked ~ .content-readmore-cottage {
+  display: block;
+}
+
+#ch2:checked ~ label {
+  display: none;
+}
+
+.content-readmore-cottage {
+  display: none;
+}
+
+.label-offer {
+  display: inline-block;
+  cursor: pointer;
+  color: rgb(255, 255, 255, 0.8);
+  background-color: rgba(93, 106, 161);
+  font-size: 14px;
+  padding: 5px 13px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+h3 {
+  line-height: 1.3 rem;
+  text-transform: uppercase;
+}
+
+
+
+#ch3 {
+  display: none;
+}
+
+#ch3:checked ~ .content-readmore-kamill {
+  display: block;
+}
+
+#ch3:checked ~ label {
+  display: none;
+}
+
+.content-readmore-kamill {
+  display: none;
+}
+
+.content-readmore-kamill ul {
+  text-align: left;
+  margin-left: 30px;
+}
+
+
+#ch4 {
+  display: none;
+}
+
+#ch4:checked ~ .content-readmore-burti {
+  display: block;
+}
+
+#ch4:checked ~ label {
+  display: none;
+}
+
+.content-readmore-burti {
+  display: none;
+}
+
+.content-readmore-burti ul {
+  text-align: left;
+  margin-left: 30px;
+}
+
+
+#ch5 {
+  display: none;
+}
+
+#ch5:checked ~ .content-readmore-glysolid {
+  display: block;
+}
+
+#ch5:checked ~ label {
+  display: none;
+}
+
+.content-readmore-glysolid {
+  display: none;
+}
+.content-readmore-glysolid ul {
+  text-align: left;
+  margin-left: 30px;
+}
 
 
 
