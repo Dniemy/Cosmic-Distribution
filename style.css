@@ -252,6 +252,7 @@ header {
   }
   .header-description {
     padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
@@ -293,7 +294,7 @@ header {
 
 .image-about {
   display: flex;
-  background-image: url(team2.png);
+  background-image: url(team.png);
   height: 500px;
   border-radius: 16px 16px 0px 0px;
   clip-path: ellipse(1110px 480px at 50% 1%)
@@ -370,7 +371,7 @@ header {
 @media (max-width: 1150px) {
   .image-about {
     height: 400px;
-    background-image: url(team2.png);
+    background-image: url(team.png);
     background-size: cover;
     background-position: center top;
     border-radius: 16px 16px 0px 0px;
@@ -390,7 +391,7 @@ header {
 @media (max-width: 600px) {
   .image-about {
     height: 300px;
-    background-image: url(team2.png);
+    background-image: url(team.png);
     background-size: cover;
     background-position: right top;
     border-radius: 16px 16px 0px 0px;
@@ -669,7 +670,7 @@ h3 {
     display: flex;
     flex-direction: column;
     width: 359px;
-    height: 400px;
+    
   }
   .offer-image {
     width: 134px;
