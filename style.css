@@ -865,3 +865,13 @@ form button {
 .footer-description {
   color: white;
 }
+
+
+
+.section-heading {
+  padding: 10px;
+  text-align: center;
+  color: #717EB7;
+  font-size: 20px;
+  font-weight: bold;
+}
