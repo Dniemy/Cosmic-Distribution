@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.png" type="image/x-icon">
     <title>Cosmic Distribution</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
 <div class="nav">
@@ -261,14 +262,16 @@
             
             <div class="column-form">
 
-                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                        <input type="hidden" name="access_key" value="17aa7312-a0bf-48e8-97dc-40761725b40e">
+                    <form id="contact-form" action="#submit" method="POST" class="contact-form">
+                        <div class="section-heading" id="section-heading">Napisz do nas!</div>
+                       <input type="hidden" name="access_key" value="17aa7312-a0bf-48e8-97dc-40761725b40e"> 
+                    
                             <input type="text" id="name" name="name" placeholder="Imię i nazwisko" required>
                             <input type="email" id="email" name="email" placeholder="E-mail" required>
                             <input type="text" id="phone" name="phone" placeholder="Numer telefonu" required>
-                            <textarea id="msg" name="msg" required rows="10" placeholder="Wiadomość"></textarea>    
+                            <textarea id="msg" name="msg" required rows="8" placeholder="Wiadomość"></textarea>    
                             
-                        <button type="submit">Wyślij</button>
+                        <button type="submit" id="submit-button">Wyślij</button>
                     </form>
 
                     <p class="msg-status"></p>
@@ -283,7 +286,39 @@
     <section class="footer">
         <p class="footer-description">Copyright © 2023</p>
     </section>
-   
+
+   <script>
+$(document).ready(function() {
+    $('#contact-form').submit(function(event) {
+        event.preventDefault();  // Prevent default form submission
+
+        // Disable submit button
+
+        $('#name').css('visibility','hidden');
+        $('#email').css('visibility','hidden');
+        $('#phone').css('visibility','hidden');
+        $('#msg').css('visibility','hidden');
+        $('#section-heading').html('<div class="section-heading"><h6>Wysyłanie wiadomości...</h6></div>');
+
+        // Send the form data using Ajax
+
+        $.ajax({
+            url: 'https://api.web3forms.com/submit',
+            type: 'POST',
+            data: $('#contact-form').serialize(),
+            success: function(response) {
+                // Replace the form with the thank you message
+                $('#section-heading').html('<div class="section-heading"><h4>Wiadomość wysłana <em>dziękujemy</em> !</h4></div>');
+            },
+            error: function(error) {
+                $('#section-heading').html("<div class=\"section-heading\"><h6>Podczas wysyłania wiadomości wystąpił błąd:  <br><br> Prosimy o kontakt poprzez email na adres: <br> office@cosmic-distribution.pl</h6></div>");
+                console.log(error);
+            }
+        });
+    });
+});
+
+</script>
 </body>
 <script src="script.js"></script>
 </html>
