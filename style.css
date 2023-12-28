@@ -253,7 +253,7 @@ header {
     height: 306px;
   }
   .header-description {
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 40px;
   }
 }
@@ -829,7 +829,26 @@ form button {
   border-radius: 12px;
 }
 
+.msg-status {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 90%;
+  padding: 30px;
+  width: 500px;
+  border-radius: 12px;
+  font-size: 24px;
+}
 
+.success {
+  display: flex;
+  background-color: greenyellow;
+}
+.error {
+  display: flex;
+  background-color: red;
+}
 
 /* FOOTER */
 
