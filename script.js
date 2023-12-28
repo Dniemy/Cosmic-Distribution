@@ -15,6 +15,7 @@ document.querySelectorAll(".nav-link").forEach(n => n.
         navMenu.classList.remove("active")
     }))
 
+    
 
 /* SLIDER */
 
@@ -46,25 +47,3 @@ wrapper.addEventListener('mousemove', function (e) {
     this.scrollLeft += startX - e.clientX
 })
 
-
-
-
-
-/* CONTACT FORM */
-
-function sendEmail(){
-    sendEmail.send({
-        Host : "smtp.yourisp.com",
-        Username : "d.niemyska@gmail.com",
-        Password : "password",
-        To : "dniemy12@gmail.com",
-        From : document.getElementById("email").value,
-        Subject : "Nowa wiadomość z formularza kontaktowego",
-        Body : "Name: " + document.getElementById("name").value 
-            + "<br> Email: " + document.getElementById("email").value
-            + "<br> Numer telefonu: " + document.getElementById("phone").value
-            + "<br> Wiadomość: " + document.getElementById("message").value
-    }).then(
-            message => alert("Wiadomość została wysłana.")
-        );
-    }
