@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.png" type="image/x-icon">
     <title>Cosmic Distribution</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
 <div class="nav">
@@ -261,14 +260,19 @@
             
             
             <div class="column-form">
-                
-                <form onsubmit="sendEmail(); reset(); return false;">
-                    <input type="text" id="name" placeholder="Imię i nazwisko" required>
-                    <input type="email" id="email" placeholder="E-mail" required>
-                    <input type="text" id="phone" placeholder="Numer telefonu" required>
-                    <textarea id="message" required rows="10" placeholder="Wiadomość"></textarea>
-                    <button type="submit">Wyślij</button>
-                </form>
+
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                        <input type="hidden" name="access_key" value="17aa7312-a0bf-48e8-97dc-40761725b40e">
+                            <input type="text" id="name" name="name" placeholder="Imię i nazwisko" required>
+                            <input type="email" id="email" name="email" placeholder="E-mail" required>
+                            <input type="text" id="phone" name="phone" placeholder="Numer telefonu" required>
+                            <textarea id="msg" name="msg" required rows="10" placeholder="Wiadomość"></textarea>    
+                            
+                        <button type="submit">Wyślij</button>
+                    </form>
+
+                    <p class="msg-status"></p>
+
 
             </div>
 
@@ -282,5 +286,4 @@
    
 </body>
 <script src="script.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
 </html>
